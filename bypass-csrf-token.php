@@ -33,7 +33,7 @@
 	for ($i = 0; $i < $tokens->length; $i++) 
 	{
 		$meta = $tokens->item($i);
-		if($meta->getAttribute('name') == 'csrfmiddlewaretoken')
+		if($meta->getAttribute('name') == $csrf_token_field_name)
 			$t = $meta->getAttribute('value');
 	}
 	if($t) {
